@@ -70,7 +70,7 @@ func BenchmarkInsertSingleRowParallelPostgres(b *testing.B) {
 	})
 }
 
-func BenchmarkUpdateByIDTimescale(b *testing.B) {
+/* func BenchmarkUpdateByIDTimescale(b *testing.B) {
 	db, err := sql.Open("postgres", timescaleURL)
 	if err != nil {
 		b.Fatalf("Failed to connect to DB: %v", err)
@@ -128,4 +128,4 @@ func BenchmarkUpdateByIDPostgres(b *testing.B) {
    }
   }
  })
-}
+} */

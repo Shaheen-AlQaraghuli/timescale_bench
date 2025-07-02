@@ -14,7 +14,7 @@ import (
 const (
 	timescaleURL       = "postgres://postgres:postgres@localhost:5432/shift_db?sslmode=disable"
 	postgresURL 	   = "postgres://postgres:postgres@localhost:5433/shift_db?sslmode=disable"
-	totalRows   = 1000000
+	totalRows   = 100000
 	batchSize   = 10000
 	concurrency = 10
 )
@@ -86,7 +86,7 @@ func insertBatch(db *sql.DB, batch []allocation) error {
 }
 
 func main() {
-	db, err := sql.Open("postgres", timescaleURL)
+	db, err := sql.Open("postgres", postgresURL)
 	if err != nil {
 		log.Fatalf("Failed to connect to DB: %v", err)
 	}
